@@ -4,7 +4,7 @@ import numpy as np
 
 
 SIDE  = 80			# pixel of square image
-Ncicli= 500000		# n of speckle realizations
+Ncicli= 500000			# n of speckle realizations
 
 Nspek = 10			# n of speckle per image
 Vspek = 1			# highest value of the speckle field
@@ -12,9 +12,9 @@ Sspek = 3			# size of each speckle (in pixels)
 
 Xobs  = 20			# start of shadow (in x and y)
 Yobs  = 60			# end of shadow (in x and y)
-unagifogni = 1000	# sampling to crate the .gif
+unagifogni = 1000		# sampling to crate the .gif
 
-path  = '/Users/simo/Desktop/GhostImage/images/'		# 'path/to/output/folder/'
+path  = './'			# 'path/to/output/folder/'
 
 
 
@@ -46,15 +46,15 @@ def main():
 
 	for k in range(0, Ncicli):
 
-		I = speck_generator(SIDE, Nspek) 	# Immagine con speckles
-		O = np.copy(I)						# Immagine con l'ombra
-
-		for i in range(Xobs,Yobs):				# Metto l'oggetto
+		I = speck_generator(SIDE, Nspek) 	# Image with speckles
+		O = np.copy(I)				# Image with shadow
+		
+		for i in range(Xobs,Yobs):		# Put the shadow
 			for j in range(Xobs,Yobs):
 				O[i,j] =0.
 
-		A = np.sum(O)						# Intensita'
-		R = R+(I	*A)							# Risultato = immagine pesata
+		A = np.sum(O)				# Total intensity
+		R = R+(I*A)				# Result = sum over weighted images
 		RCROP = R[2:SIDE-2, 2:SIDE-2]
 		CROP  = np.asarray(RCROP)
 		if((k%unagifogni)==0):
