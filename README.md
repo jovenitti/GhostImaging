@@ -1,19 +1,15 @@
-''' File: README.md '''
-
-
-#--- Run the script
-Download the file and run it with:
+#--- Run the script:  
 $ python GI_generator.py
 
 
-#--- Source code
+#--- Source code:  
 The source is coded in python3.
 
 
-#--- Algorithm
-It produces several speckle field realizations.
-Every speckle is shadowed with the same object.
-The total intensity (A) is computed for every shadowed field.
-The resulting image is computed
-with the sum of all the NON-SHADOWED images
+#--- Algorithm:  
+It produces several speckle field realizations.  
+Every speckle is shadowed with the same object.  
+The total intensity (A) is computed for every shadowed field.  
+The resulting image is computed  
+with the sum of all the NON-SHADOWED images  
 weighted on the A numbers.
