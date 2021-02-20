@@ -1,12 +1,12 @@
-#--- Run the script:  
+# Run the script:  
 $ python GI_generator.py
 
 
-#--- Source code:  
+# Source code:  
 The source is coded in python3.
 
 
-#--- Algorithm:  
+# Algorithm:  
 It produces several speckle field realizations.  
 Every speckle is shadowed with the same object.  
 The total intensity (A) is computed for every shadowed field.  
